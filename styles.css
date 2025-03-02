@@ -2,7 +2,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+}
+
+.background {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: filter 0.5s ease-in-out; /* Make blur effect smoother */
+    z-index: -1; /* Send background to the back */
+    top: -20px; /* Adjust the positioning to remove the gap */
 }
 
 header {
@@ -12,17 +22,18 @@ header {
     background-color: #1f4f9e;
     color: white;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 30px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -34,13 +45,13 @@ header {
 }
 
 .navigation ul li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .navigation ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .menu-icon {
@@ -51,21 +62,90 @@ header {
 
 .menu-icon span {
     background-color: white;
-    height: 2px;
-    width: 25px;
-    margin: 4px 0;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+}
+
+.hero {
+    background-color: #1f4f9e;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 80px;
+    z-index: 1; /* Ensure hero section is above background */
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0 0;
 }
 
 main {
-    margin-top: 70px;
-    padding: 20px;
+    margin-top: 90px;
+    padding: 40px;
     text-align: center;
+    z-index: 1; /* Ensure main content is above background */
+    position: relative; /* Make z-index effective */
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 h2 {
-    color: #333;
+    color: #1f4f9e;
+}
+
+.our-mission {
+    background-color: #153e75; /* Solid background color that matches the blue theme */
+    color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.our-mission h1 {
+    font-size: 48px; /* Larger font size */
+    font-style: italic; /* Italic font style */
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ensure two columns */
+    row-gap: 40px; /* Increase gap between rows */
+    column-gap: 10px; /* Decrease gap between columns */
+    position: relative; /* Make z-index effective */
+    z-index: 1; /* Ensure section content is above background */
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 40%; /* Shrink cards to ensure 2xN configuration */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #555;
+    font-size: 18px; /* Increase text size */
+    line-height: 1.6; /* Increase line height for readability */
 }
