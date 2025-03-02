@@ -1,8 +1,9 @@
+/* Default styles for desktop */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
 .background {
@@ -11,9 +12,9 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    transition: filter 0.5s ease-in-out; /* Make blur effect smoother */
-    z-index: -1; /* Send background to the back */
-    top: -20px; /* Adjust the positioning to remove the gap */
+    transition: filter 0.5s ease-in-out;
+    z-index: -1;
+    top: -20px;
 }
 
 header {
@@ -74,7 +75,7 @@ header {
     text-align: center;
     padding: 100px 20px;
     margin-top: 80px;
-    z-index: 1; /* Ensure hero section is above background */
+    z-index: 1;
 }
 
 .hero h1 {
@@ -91,8 +92,8 @@ main {
     margin-top: 90px;
     padding: 40px;
     text-align: center;
-    z-index: 1; /* Ensure main content is above background */
-    position: relative; /* Make z-index effective */
+    z-index: 1;
+    position: relative;
 }
 
 section {
@@ -104,37 +105,37 @@ h2 {
 }
 
 .our-mission {
-    background-color: #153e75; /* Solid background color that matches the blue theme */
+    background-color: #153e75;
     color: white;
-    padding: 80px 40px; /* Increased padding for taller section */
+    padding: 80px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw; /* Span the full width of the viewport */
+    width: 100vw;
     position: relative;
     top: 0;
     left: 0;
-    margin-left: calc(-50vw + 50%); /* Centering the section */
+    margin-left: calc(-50vw + 50%);
     margin-top: -100px;
-    z-index: 1; /* Ensure section content is above background */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 1;
+    box-sizing: border-box;
 }
 
 .our-mission h1 {
-    font-size: 48px; /* Larger font size */
-    font-style: italic; /* Italic font style */
-    margin-top: 0; /* Remove top margin */
+    font-size: 48px;
+    font-style: italic;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
 .mission-content {
-    width: 50%; /* Adjust width for more space */
-    text-align: left; /* Left-align the text */
-    font-size: 20px; /* Larger paragraph text */
+    width: 50%;
+    text-align: left;
+    font-size: 20px;
 }
 
 .mission-image {
-    width: 45%; /* Adjust width for more space */
+    width: 45%;
     height: auto;
     border-radius: 8px;
 }
@@ -142,11 +143,11 @@ h2 {
 .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Ensure two columns */
-    row-gap: 40px; /* Increase gap between rows */
-    column-gap: 10px; /* Decrease gap between columns */
-    position: relative; /* Make z-index effective */
-    z-index: 1; /* Ensure section content is above background */
+    justify-content: space-around;
+    row-gap: 40px;
+    column-gap: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .card {
@@ -154,7 +155,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 40%; /* Shrink cards to ensure 2xN configuration */
+    width: 40%;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -169,6 +170,60 @@ h2 {
 
 .card p {
     color: #555;
-    font-size: 18px; /* Increase text size */
-    line-height: 1.6; /* Increase line height for readability */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navigation ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .our-mission {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .mission-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mission-image {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
