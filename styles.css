@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .background {
@@ -105,15 +106,37 @@ h2 {
 .our-mission {
     background-color: #153e75; /* Solid background color that matches the blue theme */
     color: white;
-    padding: 40px;
-    margin-bottom: 30px;
-    text-align: center;
+    padding: 80px 40px; /* Increased padding for taller section */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw; /* Span the full width of the viewport */
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: calc(-50vw + 50%); /* Centering the section */
+    margin-top: -100px;
+    z-index: 1; /* Ensure section content is above background */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .our-mission h1 {
     font-size: 48px; /* Larger font size */
     font-style: italic; /* Italic font style */
+    margin-top: 0; /* Remove top margin */
     margin-bottom: 20px;
+}
+
+.mission-content {
+    width: 50%; /* Adjust width for more space */
+    text-align: left; /* Left-align the text */
+    font-size: 20px; /* Larger paragraph text */
+}
+
+.mission-image {
+    width: 45%; /* Adjust width for more space */
+    height: auto;
+    border-radius: 8px;
 }
 
 .content {
