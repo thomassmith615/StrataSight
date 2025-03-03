@@ -86,6 +86,20 @@ header {
     margin: 5px 0;
 }
 
+.impact-statement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 300px;
+    box-sizing: border-box;
+    margin-bottom: 200px;
+}
+
 .hero {
     background-color: #1f4f9e;
     color: white;
@@ -114,7 +128,7 @@ main {
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 200px;
 }
 
 h2 {
@@ -126,13 +140,12 @@ h2 {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 80px 40px;
+    padding: 175px 40px;
     width: 100vw;
     position: relative;
     top: 0;
     left: 0;
     margin-left: calc(-50vw + 50%);
-    margin-top: -100px;
     z-index: 1;
     box-sizing: border-box;
 }
