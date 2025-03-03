@@ -40,12 +40,14 @@ header {
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 32px; /* Adjust the size as needed */
+    font-size: 38px; /* Adjust the size as needed */
     background: url('../assets/brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: cover; /* Ensure the image covers the text properly */
     background-position: center; /* Center the background image */
+    margin-top: -15px;
+    margin-bottom: -10px;
 }
 
 
@@ -63,7 +65,7 @@ header {
 
 .navigation ul li a {
     font-family: 'Oswald', sans-serif;
-    font-weight: 600; /* Bold */
+    font-weight: 400; /* Bold */
     font-size: 18px; /* Adjust the size as needed */
     background: url('../assets/brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
     -webkit-background-clip: text;
