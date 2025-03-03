@@ -21,11 +21,15 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #1f4f9e;
+    background-image: url('black-texture.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
     color: white;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
+    background-color: rgba(0, 0, 0, 0.3); /* Adds a slight shade */
 }
+
 
 .toolbar {
     display: flex;
@@ -35,9 +39,16 @@ header {
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px; /* Adjust the size as needed */
+    background: url('brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover; /* Ensure the image covers the text properly */
+    background-position: center; /* Center the background image */
 }
+
+
 
 .navigation ul {
     list-style: none;
@@ -51,9 +62,15 @@ header {
 }
 
 .navigation ul li a {
-    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600; /* Bold */
+    font-size: 18px; /* Adjust the size as needed */
+    background: url('brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover; /* Ensure the image covers the text properly */
+    background-position: center; /* Center the background image */
     text-decoration: none;
-    font-size: 18px;
 }
 
 .menu-icon {
@@ -105,7 +122,9 @@ h2 {
 }
 
 .our-mission {
-    background-color: #153e75;
+    background-image: url('black-texture.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 80px 40px;
     width: 100vw;
@@ -119,6 +138,7 @@ h2 {
 }
 
 .our-mission h1 {
+    font-family: 'Oswald', sans-serif;
     font-size: 48px;
     font-style: italic;
     margin-top: 0;
@@ -127,6 +147,7 @@ h2 {
 }
 
 .mission-content {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -167,7 +188,7 @@ h2 {
 .card {
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Increased shadow size */
     padding: 30px;
     width: 40%;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -175,11 +196,17 @@ h2 {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Even bigger shadow on hover */
 }
 
 .card h2 {
-    margin-top: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; /* Bold */
+    background: url('black-texture.jpg') no-repeat; /* Black textured background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover; /* Ensure the image covers the text properly */
+    background-position: center; /* Center the background image */
 }
 
 .card p {
