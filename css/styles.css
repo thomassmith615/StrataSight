@@ -99,6 +99,7 @@ header {
     font-size: 56px;
     font-weight: 300px;
     box-sizing: border-box;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 200px;
 }
 
