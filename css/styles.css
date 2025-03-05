@@ -39,15 +39,17 @@ header {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 38px; /* Adjust the size as needed */
+    font-family: 'Jura', sans-serif;
+    font-size: 42px; /* Adjust the size as needed */
+    font-weight: 600; /* Slightly bolder version */
+    letter-spacing: 0.125em; /* Add spacing between letters */
     background: url('../assets/brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: cover; /* Ensure the image covers the text properly */
     background-position: center; /* Center the background image */
-    margin-top: -15px;
-    margin-bottom: -10px;
+    margin-top: -10px;
+    margin-bottom: -5px;
 }
 
 
@@ -82,7 +84,7 @@ header {
 }
 
 .menu-icon span {
-    background-color: white;
+    background: url('../assets/brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
     height: 3px;
     width: 30px;
     margin: 5px 0;
@@ -231,56 +233,96 @@ h2 {
     line-height: 1.6;
 }
 
+/* Styles for mobile devices */
 @media (max-width: 768px) {
-    /* Styles for mobile devices */
     .toolbar {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        flex-wrap: wrap; /* Allow wrapping */
     }
 
-    .navigation ul {
-        flex-direction: column;
+    .navigation {
+        display: none; /* Initially hide the navigation links */
+        width: 100%;
+        text-align: center;
         margin-top: 10px;
     }
 
-    .navigation ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .hero {
-        padding: 80px 20px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .our-mission {
+    .menu-icon {
+        display: flex;
         flex-direction: column;
-        padding: 60px 20px;
+        cursor: pointer;
     }
 
-    .mission-content {
+    .menu-icon span {
+        background: url('../assets/brushed-gold-texture.jpg') no-repeat; /* Brushed gold texture */
+        height: 3px;
+        width: 30px;
+        margin: 5px 0;
+    }
+
+    .navigation.active {
+        display: block; /* Display the navigation when the 'active' class is added */
+    }
+
+    /* Impact statement adjustments */
+    .impact-statement {
+        font-size: 40px; /* Adjusted for readability on small screens */
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 100px; /* To avoid overlap with the header */
+    }
+
+    /* Background image fit */
+    .background {
+        background-size: cover; /* Make sure the image covers the height of the screen */
+        background-position: center center;
+    }
+
+    /* Our mission section adjustments */
+    .our-mission {
+        padding: 60px 20px;
+        background-size: cover;
+        background-position: center center;
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Mission content layout adjustments */
+    .mission-content {
+        flex-direction: column;
         text-align: center;
     }
 
-    .mission-image {
+    .mission-image-container {
         width: 80%;
         margin-top: 20px;
     }
 
+    .mission-text {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 18px; /* Adjusted for readability on small screens */
+    }
+
+    /* Content and cards adjustments */
     .content {
         flex-direction: column;
+        padding-right: 40px;
     }
 
     .card {
-        width: 80%;
+        width: 100%;
         margin-bottom: 20px;
+        padding: 20px;
+        font-size: 16px; /* Adjusted for better readability */
+    }
+
+    .card h2 {
+        font-size: 24px; /* Adjusted for better readability */
     }
 }
